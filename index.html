@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        
+    <title>hello everyone</title>
+<style>
+    body {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+</style>
+ </head>
+<body>
+ <button>click me.</button>
+    <h1>do you think that this is a heading?  </h1>
+ <a href="HTTPS://WWW.google.com">who knows, this can be a link. not sure</a>
+ <progress value="10" max="100">
+     
+ </progress>
+<details>
+  <summary>Click here to see if I'm sure</summary>
+  <p>Nope, I have no <b> idea </b>
+   what I'm <i> doing </i>  </p>
+</details>
+ <h2>if you dig into this, you may discover a secret. watch to find out</h2>
+  <a href="https://www.google.com/teapot">click this link to unlock your creativity potential!</a>
+<fieldset>
+    <legend>Confirm your existence</legend>
+    <input type="checkbox"> I am real
+    <fieldset>
+        <legend>Are you sure?</legend>
+        <input type="checkbox"> I am absolutely sure
+        <fieldset>
+            <legend>Actually, check again</legend>
+            <input type="checkbox"> I might be a hallucination
+        </fieldset>
+    </fieldset>
+</fieldset>
+
+<script>
+    // 1. Checkbox element selections and logic stay at the top
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const progressBar = document.querySelector('progress');
+
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            let checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            progressBar.value = (checkedCount / checkboxes.length) * 100;
+            
+            if(progressBar.value === 100) {
+                document.querySelector('h1').innerText = "CONGRATULATIONS. YOU WASTED 20 SECONDS.";
+            }
+        });
+    });
+
+    // 2. The Fixed, Explicit Color-Flipping Button Script (At the very bottom)
+    const clickMeButton = document.querySelector('button');
+    
+    clickMeButton.addEventListener('click', () => {
+        // Check if we are currently inverted (white background)
+        if (document.body.style.backgroundColor === 'rgb(255, 255, 255)' || document.body.style.backgroundColor === 'white') {
+            // Revert back to the classic hacker terminal mode (Black bg, white text)
+            document.body.style.backgroundColor = '#000000';
+            document.body.style.color = '#FFFFFF';
+            clickMeButton.innerText = "click me.";
+        } else {
+            // Explicitly flip it to the blinding light mode (White bg, black text)
+            document.body.style.backgroundColor = '#FFFFFF';
+            document.body.style.color = '#000000';
+            clickMeButton.innerText = "un-click me.";
+        }
+    });
+</script>
+
+<ol>
+<li> heading</li> 
+<li> link</li>
+<li> button</li>
+<li> checkbox</li>
+<li> expandable</li>
+</ol>
+ <ol>
+     <li>banana</li>
+     <li>apple</li>
+     <li>mango</li>
+     <li>strawberry </li>
+     <li>dragon fruit</li>
+<li>kiwi fruit</li>
+ </ol>
+ <table>
+
+    <colgroup>
+    <col>
+        <col>
+            </colgroup>
+<tr><td>TalkBack</td>
+<td> Android</td>
+</tr>
+ <tr>
+ 
+<td> voiceover</td>
+<td> IOS</td>
+ </tr>
+ <tr>
+      <td>NVDA</td>
+<td>windows</td>
+</tr>
+<tr>
+    <td>narrator</td>
+<td>windows</td>
+</tr>
+<tr>
+    
+<td>jaws</td>
+<td> windows </td>
+</tr>
+<tr>
+    <td>prudence screen reader</td>
+<td>Android</td>
+</tr>           
+           </table>
+           <p> did you reach the end of this very <b> absurd </b>puzzle? <i>ask </i>yourself.</p>
+  </body>
+ </html>
